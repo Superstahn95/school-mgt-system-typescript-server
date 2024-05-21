@@ -13,6 +13,7 @@ const userSchema = new mongoose.Schema(
     otherNames: { type: String },
     address: { type: String, required: true },
     role: { type: String, enum: Object.values(UserRole), required: true },
+    isVerified: { type: Boolean, default: false },
   },
   { timestamps: true }
 );
